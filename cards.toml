@@ -1,0 +1,389 @@
+version = "2023-11-03"
+
+[[cards]]
+title = "Stringhe: lunghezza"
+front = "Ottenere la lunghezza di una stringa"
+back = """
+len(string)
+"""
+
+[[cards]]
+title = "Stringhe: prefissi e suffissi"
+front = "Verificare se una stringa è prefisso o suffisso di un'altra"
+back = """
+s = "prestigiatore"
+
+# prefisso
+s.startswith("pres")
+
+# suffisso
+s.endswith("ore")
+"""
+
+[[cards]]
+title = "Stringhe: conteggio occorrenze"
+front = "Contare quante occorrenze di una sottostringa ci sono in una stringa"
+back = """
+s = "banana"
+s.count("na")
+"""
+
+[[cards]]
+title = "Stringhe: trovare la posizione"
+front = "Trovare la posizione di una sottostringa in una stringa data"
+back = """
+s = "banana"
+
+# trova la prima
+# occorrenza
+s.find("na")
+
+# trova la seconda
+# occorrenza
+s.find("na", start=3)
+"""
+
+[[cards]]
+title = "Stringhe: maiuscolo/minuscolo"
+front = "Convertire una stringa in maiuscolo, e viceversa"
+back = """
+s = "banana"
+
+# Maiuscolo -> "BANANA"
+s.upper()
+
+# Minuscolo -> "banana"
+s.lower()
+"""
+
+[[cards]]
+title = "Stringhe: spazi"
+front = "Rimuovere gli spazi bianchi all'inizio e alla fine"
+back = """
+s = "    banana  "
+
+# rimuove spazi
+# a sinistra
+s.lstrip()
+
+# rimuove spazi
+# a destra
+s.rstrip()
+
+# rimuove spazi
+# a inizio/fine
+s.strip()
+"""
+
+[[cards]]
+title = "Stringhe: concatenazione"
+front = "Data una lista di stringhe, unirle tutte per ottenerne un sola stringa, usando una stringa specifica some 'collante'"
+back = """
+strings = [
+  "first",
+  "second",
+  "third"
+]
+
+# Produce una
+# sola stringa
+" | ".join(strings)
+"""
+
+[[cards]]
+title = "Stringhe: trova e sostituisci"
+front = "Sostituisci il pattern dato nella stringa con una nuova stringa"
+back = """
+s = "banana"
+pattern = "na"
+replacement = "NEWSTRING"
+
+s.replace(pattern, replacement)
+# il risultato e'
+# "baNEWSTRINGna"
+"""
+
+[[cards]]
+title = "Stringhe: slicing"
+front = "Accedere alla sottostringa che va da \\lstinline{ start } a \\lstinline{ end }. \\lstinline{end} è inclusa o esclusa?"
+back = """
+s = "banana"
+start = 1
+end = 4
+
+s[start:end]
+"""
+
+[[cards]]
+title = "File: leggere un file"
+front = "Aprire un file in lettura e leggerne tutto il contenuto"
+back = """
+fname = "myfile.txt"
+
+fh = open(fname, "r")
+content = fh.read()
+fh.close()
+"""
+
+[[cards]]
+title = "File: scrivere un file (1)"
+front = "Scrivere un file, cancellando il contenuto precedente"
+back = """
+fname = "myfile.txt"
+content = "Ciao"
+
+fh = open(fname, "w")
+print(content, file=fh)
+fh.close()
+"""
+
+[[cards]]
+title = "File: scrivere un file (2)"
+front = "Scrivere un file, aggiungendo al contenuto precedente"
+back = """
+fname = "myfile.txt"
+content = "Ciao"
+
+fh = open(fname, "a")
+print(content, file=fh)
+fh.close()
+"""
+
+[[cards]]
+title = "Liste: ordinare (1)"
+front = "Ordinare una lista in ordine crescente"
+back = """
+my_list = [
+  3, 5, 1, 3
+]
+
+my_list.sort()
+"""
+
+[[cards]]
+title = "Liste: ordinare (2)"
+front = "Ordinare una lista in ordine decrescente"
+back = """
+my_list = [
+  3, 5, 1, 3
+]
+
+my_list.sort(
+  reverse=True
+)
+"""
+
+[[cards]]
+title = "Liste: cercare (1)"
+front = "Cercare un elemento che è in una lista"
+back = """
+my_list = [
+  "dog",
+  "cat",
+  "tiger"
+]
+
+my_list.index("cat")
+"""
+
+[[cards]]
+title = "Liste: cercare (2)"
+front = "Cercare un elemento che non è in una lista. Cosa succede? Viene ritornato -1 o riceviamo un errore? Dobbiamo controllare prima?"
+back = """
+my_list = [
+  "dog",
+  "cat",
+  "tiger"
+]
+
+target = "lion"
+if target in my_list:
+    my_list.index(target)
+else:
+    print("not found")
+"""
+
+[[cards]]
+title = "Liste: iterazione (1)"
+front = """
+Iterare su tutti gli elementi di una lista, per indice, usando un ciclo for
+"""
+back = """
+my_list = [
+  "dog",
+  "cat",
+  "tiger"
+]
+
+n = len(my_list)
+for i in range(n):
+    print(my_list[i])
+"""
+
+[[cards]]
+title = "Liste: iterazione (2)"
+front = """
+Iterare su tutti gli elementi di una lista, per indice, usando un ciclo while
+"""
+back = """
+my_list = [
+  "dog",
+  "cat",
+  "tiger"
+]
+
+i = 0
+while i < len(my_list):
+    print(my_list[i])
+    i += 1
+"""
+
+[[cards]]
+title = "Liste: accesso (1)"
+front = """
+Accedere all'ultimo elemento di una lista
+"""
+back = """
+my_list = [
+  "dog",
+  "cat",
+  "tiger"
+]
+
+my_list[-1]
+# oppure
+my_list[len(my_list) - 1]
+"""
+
+[[cards]]
+title = "Liste: accesso (2)"
+front = """
+Accedere all'elemento all'indice \\lstinline{i}
+"""
+back = """
+my_list = [
+  "dog",
+  "cat",
+  "tiger"
+]
+
+my_list[i]
+"""
+
+[[cards]]
+title = "Liste: concatenazione"
+front = """
+Concatenare due liste assieme, in modo che tutti gli elementi di una
+vengano prima di tutti gli elementi dell'altra
+"""
+back = """
+list1 = [
+  "dog",
+  "cat",
+  "tiger"
+]
+list2 = [
+  "elephant",
+  "lion",
+  "giraffe"
+]
+
+list1 + list2
+"""
+
+[[cards]]
+title = "Liste: aggiungere"
+front = """
+Aggiungere un elemento in fondo a una lista
+"""
+back = """
+animals = [
+  "dog",
+  "cat",
+  "tiger"
+]
+
+animals.append("lion")
+"""
+
+[[cards]]
+title = "Liste: inserire"
+front = """
+Aggiungere a una lista un elemento in una posizione 
+\\lstinline{i} data
+"""
+back = """
+animals = [
+  "dog",
+  "cat",
+  "tiger"
+]
+
+animals.insert(1, "lion")
+"""
+
+[[cards]]
+title = "Liste: rimozione (1)"
+front = """
+Cancellare l'ultimo elemento di una lista
+"""
+back = """
+animals = [
+  "dog",
+  "cat",
+  "tiger"
+]
+
+animals.pop()
+"""
+
+[[cards]]
+title = "Liste: rimozione (2)"
+front = """
+Cancellare da una lista l'elemento in una posizione
+\\lstinline{i} data
+"""
+back = """
+animals = [
+  "dog",
+  "cat",
+  "tiger"
+]
+
+animals.pop(i)
+"""
+
+[[cards]]
+title = "Liste: rimozione (3)"
+front = """
+Cancellare da una lista un elemento in base al suo valore
+"""
+back = """
+animals = [
+  "dog",
+  "cat",
+  "tiger"
+]
+
+animals.remove("cat")
+"""
+
+[[cards]]
+title = "Liste: scambio elementi"
+front = """
+Scambiare i due elementi in posizione
+\\lstinline{i} e
+\\lstinline{j}.
+"""
+back = """
+animals = [
+  "dog",
+  "cat",
+  "tiger"
+]
+
+tmp = animals[i]
+animals[i] = animals[j]
+animals[j] = tmp
+"""
+
