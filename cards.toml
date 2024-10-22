@@ -1,4 +1,4 @@
-version = "2023-11-03"
+version = "2023-11-28"
 
 [[cards]]
 title = "Stringhe: lunghezza"
@@ -387,3 +387,247 @@ animals[i] = animals[j]
 animals[j] = tmp
 """
 
+[[cards]]
+title = ""
+front = """
+"""
+back = """
+"""
+
+[[cards]]
+title = "Insiemi"
+front = """
+Creare un insieme vuoto
+"""
+back = """
+emptyset = set()
+"""
+
+[[cards]]
+title = "Insiemi"
+front = """
+Aggiungere un elemento a un insieme.
+Un insieme può contenere tipi di dato diversi?
+"""
+back = """
+myset = set()
+myset.add("Elemento")
+myset.add(3)
+"""
+
+[[cards]]
+title = "Insiemi"
+front = """
+Eliminare un elemento da un insieme
+"""
+back = """
+myset = {"Pippo", "Pluto"}
+myset.discard("Pippo")
+"""
+
+[[cards]]
+title = "Insiemi"
+front = """
+Quanti elementi ci sono in un insieme?
+"""
+back = """
+myset = {"Pippo", "Pluto"}
+len(myset)
+"""
+
+[[cards]]
+title = "Insiemi"
+front = """
+Controllare se un insieme è sottoinsieme di un altro
+"""
+back = """
+s1 = {"a", "b", "c"}
+s2 = {"a", "b"}
+
+s2.issubset(s1)
+"""
+
+[[cards]]
+title = "Insiemi"
+front = """
+Unione di due insiemi
+"""
+back = """
+s1 = {"a", "b", "c"}
+s2 = {"a", "b"}
+
+s1.union(s2)
+"""
+
+[[cards]]
+title = "Insiemi"
+front = """
+Intersezione di due insiemi
+"""
+back = """
+s1 = {"a", "b", "c"}
+s2 = {"a", "b"}
+
+s1.intersection(s2)
+"""
+
+[[cards]]
+title = "Insiemi"
+front = """
+Differenza di due insiemi.
+È un'operazione commutativa?
+"""
+back = """
+s1 = {"a", "b", "c"}
+s2 = {"a", "b"}
+
+s1.difference(s2)
+"""
+
+[[cards]]
+title = "Insiemi"
+front = """
+Creare una copia dell'insieme
+"""
+back = """
+myset = {"Pippo", "Pluto"}
+
+copyset = set(myset)
+"""
+
+[[cards]]
+title = "Insiemi"
+front = """
+Controllare se un elemento è in un insieme
+"""
+back = """
+myset = {"Pippo", "Pluto"}
+
+if "Pippo" in myset:
+    print("Trovato!")
+"""
+
+[[cards]]
+title = "Dizionari"
+front = """
+Creare un dizionario vuoto
+"""
+back = """
+emptydict = dict()
+"""
+
+[[cards]]
+title = "Dizionari"
+front = """
+Creare un dizionario con qualche coppia chiave/valore
+"""
+back = """
+mydict = {
+  "name": "Pippo",
+  "height": 190
+}
+"""
+
+[[cards]]
+title = "Dizionari"
+front = """
+Ottenere il valore associato a una chiave
+"""
+back = """
+mydict = {
+  "name": "Pippo",
+  "height": 190
+}
+
+mydict["name"]
+"""
+
+[[cards]]
+title = "Dizionari"
+front = """
+Iterare sulle chiavi
+"""
+back = """
+mydict = {
+  "name": "Pippo",
+  "height": 190
+}
+
+for key in mydict.keys():
+    print(key)
+"""
+
+[[cards]]
+title = "Dizionari"
+front = """
+Iterare sui valori
+"""
+back = """
+mydict = {
+  "name": "Pippo",
+  "height": 190
+}
+
+for value in mydict.values():
+    print(value)
+"""
+
+[[cards]]
+title = "Dizionari"
+front = """
+Iterare sulle coppie chiave/valore
+"""
+back = """
+mydict = {
+  "name": "Pippo",
+  "height": 190
+}
+
+for (key, value) in mydict.items():
+    print("key is", key, "value is", value)
+"""
+
+[[cards]]
+title = "Dizionari"
+front = """
+Controllare se il dizionario contiene una chiave
+"""
+back = """
+mydict = {
+  "name": "Pippo",
+  "height": 190
+}
+
+if "name" in mydict:
+    print("Il dizionario contiene la chiave")
+"""
+
+[[cards]]
+title = "Dizionari"
+front = """
+Aggiornare o inserire un valore associato a una chiave
+"""
+back = """
+mydict = {
+  "name": "Pippo",
+  "height": 190
+}
+
+mydict["favourite food"] = "cake"
+"""
+
+[[cards]]
+title = "Dizionari"
+front = """
+Cancellare una chiave e il suo valore.
+Cosa succede se la chiave non è presente?
+"""
+back = """
+mydict = {
+  "name": "Pippo",
+  "height": 190
+}
+
+# Errore se la chiave non è presente
+mydict.pop("height")
+"""
